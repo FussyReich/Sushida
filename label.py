@@ -10,7 +10,14 @@ root = tk.Tk()
 root.title("寿司打をぶっ壊す")
 root.geometry("350x150")
 
-Header=tk.Label(text=u'寿司打を自動でやってもらおう！()')
-Header.pack()
+#メインフレームの作成
+frame=tk.Frame(root)
+frame.pack(fill=tk.BOTH, pady=10)
+
+#ウィジェットの作成
+Title=tk.Label(frame, text="自動で寿司打をやってもらおう()", font=("MSゴシック", "20", "bold"))
+
+#ウィジェットの配置
+Title.pack()
 
 root.mainloop()
