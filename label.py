@@ -2,7 +2,8 @@ import sys
 import tkinter as tk
 import tkinter.ttk as ttk
 import tkinter.font as f
-import webbrowser.open(https://sushida.net/play.html)
+import webbrowser
+webbrowser.open('https://sushida.net/play.html')
 
 def close():
     root.destroy()
