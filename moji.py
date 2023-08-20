@@ -11,7 +11,7 @@ def moji(a):
     lang = langs[0]
     #txtに変換した文字列を代入する
     txt = tool.image_to_string(
-        Image.open(a + '.png'),
+        Image.open(a+".png"),
         lang="eng",
         builder=pyocr.builders.TextBuilder(tesseract_layout=6)
     )

@@ -1,28 +1,22 @@
-import moji
 import pyautogui as pa
+import webbrowser
 import time
-start = time.time()
-pa.mouseDown(x = 765, y = 588, button = 'left')
+
+url='https://sushida.net/play.html'
+webbrowser.open(url)
+pa.mouseDown(x=720,y=493, button='left')
 pa.mouseUp()
-pa.typewrite(" ", interval = 0.0)
-nowtime = time.time()
+pa.typewrite(' ', interval=0.0)
+i=ord('a')
+nowtime=time.time()
 while True:
-    if time.time() - nowtime > 1.5:
+    if time.time()-nowtime>1.5:
         break
-i = 0
 while True:
     if time.time() - nowtime > 300:
         break
-    print(i)
-    img = pa.screenshot(
-        imageFilename="screenshot" + str(i) + ".png",    # 保存先ファイル名
-        region=(797, 588, 275, 30)    # 撮影範囲(x,y,width,height)
+    screen_shot=pa.screenshot(
+        region=(797, 588, 275, 30)
     )
-    string = moji.moji("screenshot" + str(i))
-    pa.typewrite(string, interval = 0.0)
-    print(string)
-    nowtime1 = time.time()
-    while True:
-        if time.time() - nowtime1 > 0.25:
-            break
-    i += 1
+    screen_shot.save(f'./screenshot/{chr(i)}.png') 
+    i+=1 
