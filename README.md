@@ -6,6 +6,10 @@
 mkdir screenshots
 pip install pillow
 pip install pyautogui
+pip install pyocr
+brew install tesseract
+wget https://github.com/tesseract-ocr/tessdata/raw/4.00/jpn.traineddata
+mv jpn.traineddata /usr/local/Cellar/tesseract/4.1.0/share/tessdata/
 python main.py
 ```
 ### コースを変更したいとき
