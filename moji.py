@@ -22,7 +22,7 @@ def moji(a):
         if i >= count:
             break
         if Text[i] < 'a' or Text[i] > 'z':
-            if Text[i] != '-':
+            if Text[i] !='-' or Text[i] !='?' or Text[i] !=',' or Text[i] !='!':
                 del Text[i]
                 count -= 1
             else:
