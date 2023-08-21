@@ -16,7 +16,7 @@ while True:
     if time.time()-nowtime>1.5:
         break
 t=0
-while t<8:
+while t<8: #最初の方はタイピング量が少ないのでスクショ範囲を5000円コースにする
     if t==8:
         break
     img_name=(f'./screenshots/{t}.png')
@@ -25,8 +25,9 @@ while t<8:
     pa.typewrite(Str, interval = 0.0)
     t+=1
     path='./screenshots'
-    #shutil.rmtree(path)  
-    #os.mkdir(path)
+    #画像ファイルを定期的に削除する
+    shutil.rmtree(path)  
+    os.mkdir(path)
 p=ord('a')
 while True:
     if time.time() - nowtime > 300:
@@ -44,5 +45,6 @@ while True:
             break
     p+=1
     path='./screenshots'
-    #shutil.rmtree(path)  
-    #os.mkdir(path)
+    #画像ファイルを定期的に削除する
+    shutil.rmtree(path)  
+    os.mkdir(path)

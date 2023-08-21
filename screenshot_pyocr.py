@@ -3,7 +3,7 @@ import sys
 import pyocr
 import pyocr.builders
 
-def scpy(screenshot):
+def scpy(screenshot): #画像から文字列に変換
     tools = pyocr.get_available_tools()
     tool = tools[0]
 
@@ -18,7 +18,7 @@ def scpy(screenshot):
     Text = list(txt)   #文字列を配列に変換
     count = len(Text)
     i=0
-    while True:   #寿司打の場合小文字アルファベットか'-'しか出てこないのでそれ以外の文字が出てきていたら削除する
+    while True:   #寿司打の場合小文字アルファベットか'-'と'?'と','と'!'しか出てこないのでそれ以外の文字が出てきていたら削除する
         if i >= count:
             break
         if Text[i] < 'a' or Text[i] > 'z':
