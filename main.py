@@ -33,7 +33,7 @@ while True:
         if time.time() - nowtime1 > 0.25: 
             break
     p+=1
-    path='./screenshots'
+    path='./screenshots' #パスを指定
     #画像ファイルを定期的に削除する
     shutil.rmtree(path)  
     os.mkdir(path)
