@@ -9,7 +9,7 @@ def start():
   webbrowser.open(url)
   time.sleep(3.25)
   c.click1() #スタートをクリックする
-  time.sleep(0.85)
+  time.sleep(1)
   c.click2() #ここでコースを選択
   time.sleep(0.15)
   pa.press("enter") #開始！

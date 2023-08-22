@@ -19,7 +19,7 @@ while True:
 sub.f() #10000円コース以外はコメント化
 p=ord('a')
 while True:
-    if time.time() - nowtime > 300:
+    if time.time() - nowtime > 600:
         break
     screenshot_name=(f'./screenshots/{chr(p)}.png')
     print(f'{screenshot_name}を保存しました')
